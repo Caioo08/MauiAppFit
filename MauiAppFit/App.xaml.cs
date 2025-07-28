@@ -1,12 +1,24 @@
-﻿namespace MauiAppFit
+﻿using MauiAppFit.Helpers;
+
+namespace MauiAppFit
 {
     public partial class App : Application
     {
-        public App()
-        {
-            InitializeComponent();
+        static SQLiteDataBaseHelper database;
 
-            MainPage = new AppShell();
+        public static SQLiteDataBaseHelper Database
+        {
+            get
+            {
+                if(database == null)
+                {
+                    database = new SQLiteDataBaseHelper(
+                        Path.Combine(Environment.GetFolderPath(
+                            Environment.SpecialFolder.LocalApplicationData),
+                            "XamAppFit.db3"));
+                }
+                return database;
+            }
         }
     }
 }

@@ -64,6 +64,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiXaml Update="Views\CadastroAtividade.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Views\ListaAtividades.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
