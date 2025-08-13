@@ -1,4 +1,4 @@
-﻿using SQLitePCL;
+﻿using SQLite;
 namespace MauiAppFit.Models
 {
     public class Atividade
